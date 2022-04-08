@@ -41,45 +41,45 @@
                     @enderror
                 </div>
 
-                <div class="col-md-6 mb-3">
-                    <label for="">Status</label>
-                    <input type="checkbox" {{$category->status == "1" ? 'checked' : ''}} class="form-control" name="status">
-                    @error('status')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
+{{--                <div class="col-md-6 mb-3">--}}
+{{--                    <label for="">Status</label>--}}
+{{--                    <input type="checkbox" {{$category->status == "1" ? 'checked' : ''}} class="form-control" name="status">--}}
+{{--                    @error('status')--}}
+{{--                    <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                    @enderror--}}
+{{--                </div>--}}
 
-                <div class="col-md-6 mb-3">
-                    <label for="">Popular</label>
-                    <input type="checkbox" {{$category->popular == "1" ? 'checked' : ''}} class="form-control" name="popular">
-                    @error('popular')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
+{{--                <div class="col-md-6 mb-3">--}}
+{{--                    <label for="">Popular</label>--}}
+{{--                    <input type="checkbox" {{$category->popular == "1" ? 'checked' : ''}} class="form-control" name="popular">--}}
+{{--                    @error('popular')--}}
+{{--                    <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                    @enderror--}}
+{{--                </div>--}}
 
-                <div class="col-md-12 mb-3">
-                    <label for="">Meta Title</label>
-                    <input type="text" value="{{$category->meta_title}}" class="form-control" name="meta_title">
-                    @error('meta_title')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
+{{--                <div class="col-md-12 mb-3">--}}
+{{--                    <label for="">Meta Title</label>--}}
+{{--                    <input type="text" value="{{$category->meta_title}}" class="form-control" name="meta_title">--}}
+{{--                    @error('meta_title')--}}
+{{--                    <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                    @enderror--}}
+{{--                </div>--}}
 
-                <div class="col-md-12 mb-3">
-                    <label for="">Meta Description</label>
-                    <textarea type="text" value="{{$category->meta_descrip}}" class="form-control" name="meta_descrip"></textarea>
-                    @error('meta_descrip')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
+{{--                <div class="col-md-12 mb-3">--}}
+{{--                    <label for="">Meta Description</label>--}}
+{{--                    <textarea type="text" value="{{$category->meta_descrip}}" class="form-control" name="meta_descrip"></textarea>--}}
+{{--                    @error('meta_descrip')--}}
+{{--                    <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                    @enderror--}}
+{{--                </div>--}}
 
-                <div class="col-md-12 mb-3">
-                    <label for="">Meta Keywords</label>
-                    <textarea type="text" value="{{$category->meta_keywords}}" class="form-control" name="meta_keywords"></textarea>
-                    @error('meta_keywords')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
+{{--                <div class="col-md-12 mb-3">--}}
+{{--                    <label for="">Meta Keywords</label>--}}
+{{--                    <textarea type="text" value="{{$category->meta_keywords}}" class="form-control" name="meta_keywords"></textarea>--}}
+{{--                    @error('meta_keywords')--}}
+{{--                    <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                    @enderror--}}
+{{--                </div>--}}
 @if($category->image)
     <img src="{{assets('assets/uploads/category/'.$category->image)}}" alt=" category image" >
                 <div class="col-md-12">

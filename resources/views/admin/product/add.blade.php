@@ -52,13 +52,13 @@
 {{--                </div>--}}
 
 
-                    <div class="col-md- mb-3">
-                        <label for=""> Small Description</label>
-                        <textarea type="text" class="form-control" name="small_description"></textarea>
-                        @error('small_description')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md- mb-3">--}}
+{{--                        <label for=""> Small Description</label>--}}
+{{--                        <textarea type="text" class="form-control" name="small_description"></textarea>--}}
+{{--                        @error('small_description')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
                 <div class="col-md- mb-3">
                     <label for="">Description</label>
@@ -77,13 +77,13 @@
                 </div>
 
 
-                    <div class="col-md-6 mb-3">
-                        <label for="">Selling Price</label>
-                        <input type="number" class="form-control" name="selling_price">
-                        @error('selling_price')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-6 mb-3">--}}
+{{--                        <label for="">Selling Price</label>--}}
+{{--                        <input type="number" class="form-control" name="selling_price">--}}
+{{--                        @error('selling_price')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
                     <div class="col-md-6 mb-3">
                         <label for="">Quantity</label>
@@ -93,56 +93,56 @@
                         @enderror
                     </div>
 
-                    <div class="col-md-6 mb-3">
-                        <label for="">Tax</label>
-                        <input type="number" class="form-control" name="taxsss">
-                        @error('taxsss')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-6 mb-3">--}}
+{{--                        <label for="">Tax</label>--}}
+{{--                        <input type="number" class="form-control" name="taxsss">--}}
+{{--                        @error('taxsss')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
 
 
-                    <div class="col-md-6 mb-3">
-                    <label for="">Status</label>
-                    <input type="checkbox" class="form-control" name="status">
-                        @error('status')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                </div>
+{{--                    <div class="col-md-6 mb-3">--}}
+{{--                    <label for="">Status</label>--}}
+{{--                    <input type="checkbox" class="form-control" name="status">--}}
+{{--                        @error('status')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                </div>--}}
 
-                    <div class="col-md-6 mb-3">
-                        <label for="">Trending</label>
-                        <input type="checkbox" class="form-control" name="trending">
-                        @error('trending')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-6 mb-3">--}}
+{{--                        <label for="">Trending</label>--}}
+{{--                        <input type="checkbox" class="form-control" name="trending">--}}
+{{--                        @error('trending')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
 
-                    <div class="col-md-12 mb-3">
-                    <label for="">Meta Title</label>
-                    <input type="text" class="form-control" name="meta_title">
-                        @error('meta_title')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                </div>
+{{--                    <div class="col-md-12 mb-3">--}}
+{{--                    <label for="">Meta Title</label>--}}
+{{--                    <input type="text" class="form-control" name="meta_title">--}}
+{{--                        @error('meta_title')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                </div>--}}
 
-                <div class="col-md-12 mb-3">
-                    <label for="">Meta Description</label>
-                    <textarea type="text" class="form-control" name="meta_descrip"></textarea>
-                    @error('meta_descrip')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
+{{--                <div class="col-md-12 mb-3">--}}
+{{--                    <label for="">Meta Description</label>--}}
+{{--                    <textarea type="text" class="form-control" name="meta_descrip"></textarea>--}}
+{{--                    @error('meta_descrip')--}}
+{{--                    <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                    @enderror--}}
+{{--                </div>--}}
 
-                <div class="col-md-12 mb-3">
-                    <label for="">Meta Keywords</label>
-                    <textarea type="text" class="form-control" name="meta_keywords"></textarea>
-                    @error('meta_keywords')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
+{{--                <div class="col-md-12 mb-3">--}}
+{{--                    <label for="">Meta Keywords</label>--}}
+{{--                    <textarea type="text" class="form-control" name="meta_keywords"></textarea>--}}
+{{--                    @error('meta_keywords')--}}
+{{--                    <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                    @enderror--}}
+{{--                </div>--}}
 
                 <div class="col-md-12">
                     <input type="file" class="form-control" name="image">

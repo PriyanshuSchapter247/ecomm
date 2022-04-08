@@ -34,7 +34,7 @@ use Illuminate\Support\Str;class ProductController extends Controller
 
 
         if(Auth::user()->role_as == 1){
-            $products=  Product::with(['users'])->paginate(2);
+            $products=  Product::with(['users'])->paginate(5);
         }
         else {
 //            if (Auth::user()->role_as == 0) {
@@ -79,23 +79,25 @@ use Illuminate\Support\Str;class ProductController extends Controller
 //        $products['name'] = $request->name;
         $products-> name = $request->input('name');
         $products ['slug'] = Str::slug($products['name'], '-');
-        $products-> small_description = $request->input('small_description');
+//        $products-> small_description = $request->input('small_description');
         $products-> description = $request->input('description');
         $products-> original_price = $request->input('original_price');
-        $products-> selling_price = $request->input('selling_price');
+//        $products-> selling_price = $request->input('selling_price');
         $products-> image = $request->input('image');
         $products-> qty = $request->input('qty');
-        $products-> taxsss = $request->input('taxsss');
-        $products-> status = $request->input('status') == True ? '1':'0';
-        $products-> trending = $request->input('trending')== True ? '1':'0';
-        $products-> meta_title = $request->input('meta_title');
-        $products-> meta_descrip = $request->input('meta_descrip');
-        $products-> meta_keywords = $request->input('meta_keywords');
+//        $products-> taxsss = $request->input('taxsss');
+//        $products-> status = $request->input('status') == True ? '1':'0';
+//        $products-> trending = $request->input('trending')== True ? '1':'0';
+//        $products-> meta_title = $request->input('meta_title');
+//        $products-> meta_descrip = $request->input('meta_descrip');
+//        $products-> meta_keywords = $request->input('meta_keywords');
 //        dd(auth()->user()->name);
         $products-> save();
-        $products['name']=auth()->user()->name;
-        $products['email']=auth()->user()->email;
-        dispatch(new productCreatedJob($products));
+        $data=[];
+        $data['title']=$products->name;
+        $data['name']=auth()->user()->name;
+        $data['email']=auth()->user()->email;
+        dispatch(new productCreatedJob($data));
 
 //        Mail::to(auth()->user()->email )->send(
 //            (new ProductCreated($products))
@@ -103,7 +105,7 @@ use Illuminate\Support\Str;class ProductController extends Controller
 //        Mail::to(auth()->user()->email )->send(
 //            (new ProductCreated($products))
 //        );
-        return redirect('product')->with('status',"Product Added Successfully");
+        return redirect('product')->with('success',"Product Added Successfully");
     }
 
     public function edit($id)
@@ -111,7 +113,6 @@ use Illuminate\Support\Str;class ProductController extends Controller
         $products = Product::find($id);
         return view('admin.product.edit', compact('products'));
     }
-
     public function update(ProductRequest $request , $id)
     {
 
@@ -131,19 +132,19 @@ use Illuminate\Support\Str;class ProductController extends Controller
         }
         $products-> cate_id = $request->input('cate_id');
         $products-> name = $request->input('name');
-        $products-> slug = $request->input('slug');
-        $products-> small_description = $request->input('small_description');
+//        $products-> slug = $request->input('slug');
+//        $products-> small_description = $request->input('small_description');
         $products-> description = $request->input('description');
         $products-> original_price = $request->input('original_price');
-        $products-> selling_price = $request->input('selling_price');
+//        $products-> selling_price = $request->input('selling_price');
         $products-> image = $request->input('image');
         $products-> qty = $request->input('qty');
-        $products-> taxsss = $request->input('taxsss');
-        $products-> status = $request->input('status') == True ? '1':'0';
-        $products-> trending = $request->input('trending')== True ? '1':'0';
-        $products-> meta_title = $request->input('meta_title');
-        $products-> meta_descrip = $request->input('meta_descrip');
-        $products-> meta_keywords = $request->input('meta_keywords');
+//        $products-> taxsss = $request->input('taxsss');
+//        $products-> status = $request->input('status') == True ? '1':'0';
+//        $products-> trending = $request->input('trending')== True ? '1':'0';
+//        $products-> meta_title = $request->input('meta_title');
+//        $products-> meta_descrip = $request->input('meta_descrip');
+//        $products-> meta_keywords = $request->input('meta_keywords');
         $products-> save();
 
         return redirect('products')->with('status', "product updated successfully" );

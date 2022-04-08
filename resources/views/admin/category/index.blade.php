@@ -22,6 +22,22 @@
            </tr>
            </thead>
             <tbody>
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success alert-dismissible">
+                    <p>{{ $message }}</p>
+{{--                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
+{{--                        <span aria-hidden="true">&times;</span>--}}
+{{--                    </button>--}}
+                </div>
+                @endif
+{{--            @elseif ($message = Session::get('danger'))--}}
+{{--                <div class="alert alert-danger alert-dismissible">--}}
+{{--                    <p>{{ $message }}</p>--}}
+{{--                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
+{{--                        <span aria-hidden="true">&times;</span>--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+{{--            @endif--}}
             @foreach($category as $item)
                     <tr>
                         <td>{{$item->id}}</td>
@@ -37,6 +53,8 @@
                       </td>
                     </tr>
             @endforeach
+
+
             </tbody>
             </table>
                  {!! $category->links() !!}

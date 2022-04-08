@@ -46,13 +46,13 @@
 {{--                        <label for="">Slug</label>--}}
 {{--                        <input type="text" class="form-control" value="{{$products->slug}}" name="slug">--}}
 {{--                    </div>--}}
-                    <div class="col-md- mb-3">
-                        <label for=""> Small Description</label>
-                        <textarea type="text" class="form-control"  {{$products->small_description}} name="small_description"></textarea>
-                        @error('small_description')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md- mb-3">--}}
+{{--                        <label for=""> Small Description</label>--}}
+{{--                        <textarea type="text" class="form-control"  {{$products->small_description}} name="small_description"></textarea>--}}
+{{--                        @error('small_description')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
                     <div class="col-md- mb-3">
                         <label for="">Description</label>
@@ -71,13 +71,13 @@
                     </div>
 
 
-                    <div class="col-md-6 mb-3">
-                        <label for="">Selling Price</label>
-                        <input type="number" class="form-control" value="{{$products->selling_price}}" name="selling_price">
-                        @error('selling_price')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-6 mb-3">--}}
+{{--                        <label for="">Selling Price</label>--}}
+{{--                        <input type="number" class="form-control" value="{{$products->selling_price}}" name="selling_price">--}}
+{{--                        @error('selling_price')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
                     <div class="col-md-6 mb-3">
                         <label for="">Quantity</label>
@@ -87,56 +87,56 @@
                         @enderror
                     </div>
 
-                    <div class="col-md-6 mb-3">
-                        <label for="">Tax</label>
-                        <input type="number" class="form-control" value="{{$products->taxsss}}" name="taxsss">
-                        @error('taxsss')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-6 mb-3">--}}
+{{--                        <label for="">Tax</label>--}}
+{{--                        <input type="number" class="form-control" value="{{$products->taxsss}}" name="taxsss">--}}
+{{--                        @error('taxsss')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
 
 
-                    <div class="col-md-6 mb-3">
-                        <label for="">Status</label>
-                        <input type="checkbox" class="form-control" value="{{$products->status == "1" ? 'checked':''}}" name="status">
-                        @error('status')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-6 mb-3">--}}
+{{--                        <label for="">Status</label>--}}
+{{--                        <input type="checkbox" class="form-control" value="{{$products->status == "1" ? 'checked':''}}" name="status">--}}
+{{--                        @error('status')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
-                    <div class="col-md-6 mb-3">
-                        <label for="">Trending</label>
-                        <input type="checkbox" class="form-control" {{$products->trending = "1" ? 'checked':''}} name="trending">
-                        @error('trending')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-6 mb-3">--}}
+{{--                        <label for="">Trending</label>--}}
+{{--                        <input type="checkbox" class="form-control" {{$products->trending = "1" ? 'checked':''}} name="trending">--}}
+{{--                        @error('trending')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
 
-                    <div class="col-md-12 mb-3">
-                        <label for="">Meta Title</label>
-                        <input type="text" class="form-control" {{$products->meta_title}} name="meta_title">
-                        @error('meta_title')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-12 mb-3">--}}
+{{--                        <label for="">Meta Title</label>--}}
+{{--                        <input type="text" class="form-control" {{$products->meta_title}} name="meta_title">--}}
+{{--                        @error('meta_title')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
-                    <div class="col-md-12 mb-3">
-                        <label for="">Meta Description</label>
-                        <textarea type="text" class="form-control" {{$products->meta_descrip}} name="meta_descrip"></textarea>
-                        @error('meta_descrip')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-12 mb-3">--}}
+{{--                        <label for="">Meta Description</label>--}}
+{{--                        <textarea type="text" class="form-control" {{$products->meta_descrip}} name="meta_descrip"></textarea>--}}
+{{--                        @error('meta_descrip')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
 
-                    <div class="col-md-12 mb-3">
-                        <label for="">Meta Keywords</label>
-                        <textarea type="text" class="form-control" {{$products->meta_keywords}} name="meta_keywords"></textarea>
-                        @error('meta_keywords')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+{{--                    <div class="col-md-12 mb-3">--}}
+{{--                        <label for="">Meta Keywords</label>--}}
+{{--                        <textarea type="text" class="form-control" {{$products->meta_keywords}} name="meta_keywords"></textarea>--}}
+{{--                        @error('meta_keywords')--}}
+{{--                        <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                        @enderror--}}
+{{--                    </div>--}}
             @if($products->image)
                 <img src="{{asset('assets/uploads/products/'.$products->image)}}" alt="">
                     <div class="col-md-12">

@@ -69,14 +69,17 @@ class RegisterController extends Controller
     {
 //        users['name']=auth()->user()->name;
 //        Mail::to(auth()->user()->email )->send();
+        $data['title']=$data['name'];
+        $data['name']=auth()->user()->name;
+        $data['email']=auth()->user()->email;
+        dispatch(new RegisterUserJob($data));
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+
         ]);
-        $data['name']->user()->name;
-        $data['email']->user()->email;
-        dispatch(new RegisterUserJob($data));
+
     }
 }

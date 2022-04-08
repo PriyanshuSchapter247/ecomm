@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use PhpParser\Node\Scalar\MagicConst\File;
 use App\jobs\CategoryCreatedJob;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class
 CategoryController extends Controller
@@ -21,7 +22,7 @@ CategoryController extends Controller
 
 
             if(Auth::user()->role_as == 1){
-              $category=  Category::with(['products'])->paginate(2);
+              $category=  Category::with(['products'])->paginate(5);
             }
             else {
 //                if(Auth::user()->role_as == 0){
@@ -70,15 +71,18 @@ CategoryController extends Controller
         $category ['slug'] = Str::slug($category['name'], '-');
         $category->user_id = $user_id;
         $category->description = $request->input('description');
-        $category->status = $request->input('status') == True ? '1' : '0';
-        $category->popular = $request->input('popular') == True ? '1' : '0';
-        $category->meta_title = $request->input('meta_title');
-        $category->meta_descrip = $request->input('meta_descrip');
-        $category->meta_keywords = $request->input('meta_keywords');
+//        $category->status = $request->input('status') == True ? '1' : '0';
+//        $category->popular = $request->input('popular') == True ? '1' : '0';
+//        $category->meta_title = $request->input('meta_title');
+//        $category->meta_descrip = $request->input('meta_descrip');
+//        $category->meta_keywords = $request->input('meta_keywords');
+//        Alert::success('Success', 'You\'ve Successfully Add Category')->persistent('close')->autoClose(500);
         $category->save();
-        $Category['name']=auth()->user()->name;
-        $Category['email']=auth()->user()->email;
-        dispatch( new CategoryCreatedJob($category));
+        $data=[];
+        $data['title']=$category->name;
+        $data['name']=auth()->user()->name;
+        $data['email']=auth()->user()->email;
+        dispatch( new CategoryCreatedJob($data));
 
 //        Mail::to($category['email'] )->send(
 //            (new CategoryCreated($category))
@@ -86,7 +90,8 @@ CategoryController extends Controller
 //        Mail::to(auth()->user()->email )->send(
 //            (new CategoryCreated($category))
 //        );
-        return redirect('/dashboard')->with('status', 'category added successfully');
+
+        return redirect('/categories')->with('success', 'Category created successfully');
     }
 
     public function edit($id)
@@ -124,11 +129,11 @@ CategoryController extends Controller
         $category->name = $request->input('name');
 //        $category->slug = $request->input('slug');
         $category->description = $request->input('description');
-        $category->status = $request->input('status') == True ? '1' : '0';
-        $category->popular = $request->input('popular') == True ? '1' : '0';
-        $category->meta_title = $request->input('meta_title');
-        $category->meta_descrip = $request->input('meta_descrip');
-        $category->meta_keywords = $request->input('meta_keywords');
+//        $category->status = $request->input('status') == True ? '1' : '0';
+//        $category->popular = $request->input('popular') == True ? '1' : '0';
+//        $category->meta_title = $request->input('meta_title');
+//        $category->meta_descrip = $request->input('meta_descrip');
+//        $category->meta_keywords = $request->input('meta_keywords');
         $category->update;
         return redirect('dashboard')->with('status', 'category update successfully');
 
